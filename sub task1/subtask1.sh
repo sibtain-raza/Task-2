@@ -3,6 +3,7 @@ sudo apt-get install apache2
 sudo ufw allow 'Apache'
 sudo systemctl enable apache2.service
 sudo a2enmod userdir
+sudo mkdir /var/www/soldier.io
 sudo mkdir /var/www/soldier.io/html
 touch /var/www/soldier.io/html/index.html
 echo "<html>
