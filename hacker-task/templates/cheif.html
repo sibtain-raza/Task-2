@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      <h3>
+         <a href = "{{ url_for('home') }}">Return to Homepage </a>
+      </h3>
+      
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+      
+      
+      <table>
+         <thead>
+            <tr>
+               <th>USERNAME</th>
+               <th>DATE : TIME</th>
+               <th>COMPLAIN</th>
+               <th>ID</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for soldier in soldiers %}
+               <tr>
+                  <td>{{ soldier.username }}</td>
+                  <td>{{ soldier.date }}</td>
+                  <td>{{ soldier.complain }}</td>
+                  <td>{{ soldier.Id }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </body>
+</html>

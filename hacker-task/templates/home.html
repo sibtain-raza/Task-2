@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      <h3>
+         <a href = "{{ url_for('home') }}">HOME PAGE</a>
+      </h3>
+      
+      
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+      <h3>  <a href = "{{ url_for('complain') }}">Add Complain
+         </a></h3>
+      <h2>
+            <a href = "{{ url_for('cheif') }}">Cheif Page</a>
+      </h2>   
+      
+     
+   </body>
+</html>
