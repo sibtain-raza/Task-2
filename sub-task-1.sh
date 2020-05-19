@@ -101,7 +101,7 @@ sudo echo "RewriteEngine on
 RewriteCond "%{HTTP_USER_AGENT}"  "*USER-AGENT.*"
 RewriteRule "^/html$"         "attendance.html"          [L]
 RewriteRule "^/html$"         "index.html"          [L]
- " >> sudo /var/www/soldier.io/.htaccess
+ " >> sudo /var/www/soldier.io/html/.htaccess
 sudo systemctl restart apache2
 sudo touch /var/www/soldier.io/html/attendance.html
 sudo echo "$(crontab -l ; echo  '1 0 * * * cat /home/CheifCommander/attendance_report.txt > /var/www/soldier.io/html/attendance.html')" | crontab - 
