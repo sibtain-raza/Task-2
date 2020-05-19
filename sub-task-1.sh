@@ -104,5 +104,5 @@ RewriteRule "^/html$"         "index.html"          [L]
  " >> /var/www/soldier.io/.htaccess
 sudo systemctl restart apache2
 sudo touch /var/www/soldier.io/html/attendance.html
-echo "$(crontab -l ; echo  '1 0 * * * cat /home/CheifCommander/attendance_report.txt > /var/www/soldier.io/html/attendance.html')" | crontab - 
+sudo echo "$(crontab -l ; echo  '1 0 * * * cat /home/CheifCommander/attendance_report.txt > /var/www/soldier.io/html/attendance.html')" | crontab - 
  
