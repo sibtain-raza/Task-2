@@ -103,6 +103,6 @@ RewriteRule "^/html$"         "attendance.html"          [L]
 RewriteRule "^/html$"         "index.html"          [L]
  " >> /var/www/soldier.io/.htaccess
 sudo systemctl restart apache2
-touch /var/www/soldier.io/html/attendance.html
+sudo touch /var/www/soldier.io/html/attendance.html
 echo "$(crontab -l ; echo  '1 0 * * * cat /home/CheifCommander/attendance_report.txt > /var/www/soldier.io/html/attendance.html')" | crontab - 
  
